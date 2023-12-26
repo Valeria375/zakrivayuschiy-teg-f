@@ -41,11 +41,11 @@
 }
 .header__title {
   font-size: var(--header-size);
-  margin-block-start: 120px;
+  margin-block-start: var(--header-margin-start);
   margin-block-end: 20px;
 }
 .header__text {
-  font-size: 14px;
+  font-size: var(--header-text-size);
   text-transform: uppercase;
   margin-block-end: 25px;
 }
@@ -105,8 +105,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  margin: 25px 26px;
-  margin-block-end: 25px;
+  margin: 27px 25px 27px 25px;
+  /* margin-block-end: 25px; */
 }
 .card__text {
   /* margin: 25px 28px; */
@@ -122,8 +122,8 @@ main {
   font-weight: 400;
   color: var(--Themes-mainColor);
   position: absolute;
-  inset-inline-end: 11px;
-  inset-block-start: 23px;
+  inset-inline-end: var(--image-margin);
+  inset-block-start: var(--image-start);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   /* z-index: 1; */

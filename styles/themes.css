@@ -4,7 +4,7 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
-.root .theme-light {
+:root.theme-light {
   --Themes-mainColor: #000;
   --Themes-background: repeating-linear-gradient(
       to right,
@@ -16,7 +16,7 @@
     --Themes-background-color: #fff;
     --shadow-color: #fff;
 }
-.root .theme-dark {
+:root.theme-dark {
   --Themes-mainColor: #00cc14;
   --Themes-background: repeating-linear-gradient(
       to right,
@@ -28,31 +28,19 @@
     --Themes-background-color: #fff;
     --shadow-color: #000;
 }
+
+
 @media (prefers-color-scheme: light) {
-  :root {
-    --Themes-mainColor: #000;
-    --Themes-background: repeating-linear-gradient(
-        to right,
-        #d3d3d3,
-        transparent 2px
-      ),
-      repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-      linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-      --Themes-background-color: #fff;
-      --shadow-color: #fff;
-  }
-}
-@media (prefers-color-scheme: dark) {
     :root {
-        --Themes-mainColor: #00cc14;
-        --Themes-background: repeating-linear-gradient(
-            to right,
-            #000,
-            transparent 2px
-          ),
-          repeating-linear-gradient(to bottom, #000, transparent 2px),
-          linear-gradient(to bottom, #007f0c, #004306);
-          --Themes-background-color: #fff;
-          --shadow-color: #000;
-      }
-}
+      --Themes-mainColor: #000;
+      --Themes-background: repeating-linear-gradient(
+          to right,
+          #d3d3d3,
+          transparent 2px
+        ),
+        repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+        linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+        --Themes-background-color: #fff;
+        --shadow-color: #fff;
+    }
+  }

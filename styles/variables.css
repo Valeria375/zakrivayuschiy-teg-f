@@ -2,23 +2,30 @@
 
 :root {
   --Themes-mainColor: #000;
-  --Themes-background:  repeating-linear-gradient(
-    to right,
-    #d3d3d3,
-    transparent 2px
-  ),
-  repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --Themes-background: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      transparent 2px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --Themes-background-color: #fff;
   --shadow-color: #fff;
-  --block-size:  100%;
-  --header-size:49px;
-  
-
+  --block-size: 100%;
+  --header-size: 49px;
+  --header-margin-start: 120px;
+  --header-text-size: 14px;
+  --image-margin: 11px;
+  --image-start: 23px;
 }
 @media (width > 376px) {
   :root {
-    --block-size: clamp(375px, 48.5%, 696px);;
-    --header-size:65px;
-}
+    --block-size: clamp(375px, 48.5%, 696px);
+    --header-size: 65px;
+    --header-margin-start: 136px;
+    --header-text-size: 23px;
+    --image-margin: 25px;
+  --image-start: 25px;
+
+  }
 }
