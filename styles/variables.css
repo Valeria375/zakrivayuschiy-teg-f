@@ -1,1 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --Themes-mainColor: #000;
+  --Themes-background:  url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat,
+  linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  --Themes-background-color: #fff;
+  --shadow-color: #fff;
+ 
+}

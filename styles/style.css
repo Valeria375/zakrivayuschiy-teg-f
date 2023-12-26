@@ -17,4 +17,96 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: "Press Start 2P", "Inter";
+  font-size: 18px;
+  color: var(--Themes-mainColor);
+  background: var(--Themes-background);
+  align-content: center;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  inline-size: 375px;
+  flex-direction: column;
+  background-color: var(--Themes-background-color);
+  border: 2px solid var(--Themes-mainColor, #000);
+  margin-block: 102px 104px;
+}
+.header__title {
+  font-size: 49px;
+  margin-block-start: 120px;
+  margin-block-end: 20px;
+}
+.header__text {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-block-end: 25px;
+}
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  margin-block-end: 20px;
+  font-size: 14px;
+}
+.theme-menu__button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.theme-menu__item button:disabled::before {
+  content: "▶";
+  display: inline-block;
+  opacity: 0.6;
+  animation: cursor-translation 0.5s ease-in-out infinite alternate;
+}
+.card {
+  background-color: var(--Themes-background-color);
+  outline: 2px solid var(--main-font-color);
+  font-family: "Inter";
+ border: 2px solid var(--Themes-mainColor, #000);;
+inline-size: 375px;
+}
+.card:not(:first-child) {
+  margin-block-start: 54px;
+}
+.card__header {
+  /* max-width: 371px; */
+  font-size: 18px;
+  font-weight: 700;
+  
+  /* margin: 8px 10px; */
+  margin-inline: 10px 24px;
+}
+.card__image {
+  inline-size: 100%;
+  object-fit: cover;
+}
+.card__text {
+  margin: 25px 28px;
+  line-height: 116.667%;
+}
+.image__section {
+  position: relative;
+}
+.image__text {
+  font-family:'Press Start 2P';
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Themes-mainColor);
+  position: absolute;
+  inset-inline-end: 11px;
+  inset-block-start: 23px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+  text-shadow: -1px 0 var(--shadow-color), 0 1px var(--shadow-color),
+    1px 0 var(--shadow-color), 0 -1px var(--shadow-color);
 }
