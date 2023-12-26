@@ -95,6 +95,7 @@ main {
   font-weight: 700;
   margin-block-end: 8px;
   /* margin: 8px 10px; */
+  margin-block-start: 2px;
   margin-inline: 10px 24px;
 }
 .card__image {
@@ -105,8 +106,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  margin: 27px 25px 27px 25px;
-  /* margin-block-end: 25px; */
+  margin-block-start: 27px;
+  margin-left: 25px;
+  /* margin: 27px 25px 25px; */
+  margin-block-end: 25px;
+  /* margin-right: 25px; */
+  margin-right: var(--margin-card-text);
 }
 .card__text {
   /* margin: 25px 28px; */
@@ -126,7 +131,7 @@ main {
   inset-block-start: var(--image-start);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  /* z-index: 1; */
+  z-index: 1;
   text-shadow: -1px 0 var(--shadow-color), 0 1px var(--shadow-color),
     1px 0 var(--shadow-color), 0 -1px var(--shadow-color);
 }
@@ -167,5 +172,17 @@ main {
   width: 130px;
 }
 .saturated {
-  filter: saturate(200%);
+  filter: saturate(30%);
+}
+.sepia {
+  filter: sepia(90%);
+}
+.blur {
+filter: blur(10px);
+}
+.invert {
+  filter: invert(0.8);
+}
+.hue-rotate {
+  filter: contrast(150%) brightness(80%);
 }

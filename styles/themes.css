@@ -25,8 +25,8 @@
     ),
     repeating-linear-gradient(to bottom, #000, transparent 2px),
     linear-gradient(to bottom, #007f0c, #004306);
-    --Themes-background-color: #fff;
-    --shadow-color: #000;
+    --Themes-background-color: #000;
+    --shadow-color: #00cc14;
 }
 
 
