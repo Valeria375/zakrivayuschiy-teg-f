@@ -2,9 +2,23 @@
 
 :root {
   --Themes-mainColor: #000;
-  --Themes-background:  url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat,
-  linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  --Themes-background:  repeating-linear-gradient(
+    to right,
+    #d3d3d3,
+    transparent 2px
+  ),
+  repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --Themes-background-color: #fff;
   --shadow-color: #fff;
- 
+  --block-size:  100%;
+  --header-size:49px;
+  
+
+}
+@media (width > 376px) {
+  :root {
+    --block-size: clamp(375px, 48.5%, 696px);;
+    --header-size:65px;
+}
 }
