@@ -148,19 +148,15 @@ main {
     1px 0 var(--shadow-color), 0 -1px var(--shadow-color);
 }
 
-/* .card__icon-button {
-  block-size: 36px;
-  inline-size: 39px;
-
-  padding: 0;
-
+.card__icon-button {
   background-color: transparent;
   border: transparent;
-
+  block-size: 36px;
+  inline-size: 39px;
+  padding: 0;
   transition: outline .3s ease;
-
   cursor: pointer;
-} */
+}
 .buttons {
   display: grid;
   gap: 12px;
@@ -182,7 +178,7 @@ main {
   inset-inline-end: 25px;
   margin-block-end: 25px;
   border: 2px solid var(--Themes-mainColor);
-  background: transparent;
+  background-color: transparent;
   width: 130px;
   inline-size: 130px;
   block-size: 38px;
@@ -285,6 +281,9 @@ main {
   animation-iteration-count: 1;
 }
 .button__decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -292,11 +291,9 @@ main {
   font-size: 14px;
   /* font-weight: 400; */
   /* line-height: 90%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
-.save-button {
+.save__button {
   min-inline-size: 306px;
   max-inline-size: 335px;
   inline-size: 24.6%;
