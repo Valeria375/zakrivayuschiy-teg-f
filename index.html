@@ -99,7 +99,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button button-interactive">
+          <button class="card__like-button button__decor">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -158,7 +158,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </div>
@@ -168,7 +168,7 @@
         <div class="image__section">
           <span class="image__text">&lt;css&gt;</span>
           <img
-            class="card__image hue-rotate"
+            class="card__image card__image-1"
             src="./images/car-image-first.png"
             alt="картинка автомобиля"
             loading="lazy"
@@ -217,7 +217,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </div>
@@ -227,7 +227,7 @@
         <div class="image__section">
           <span class="image__text">&lt;desigions&gt;</span>
           <img
-            class="card__image"
+            class="card__image card__image-2"
             src="./images/car-image-first.png"
             alt="картинка автомобиля"
             loading="lazy"
@@ -276,7 +276,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </div>
@@ -335,7 +335,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </section>
@@ -391,7 +391,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </section>
@@ -448,7 +448,7 @@
             />
           </svg>
         </button>
-        <button class="card__like-button button-interactive">
+        <button class="card__like-button button__decor">
           <span class="button__text">Like</span>
         </button>
       </section>
@@ -457,7 +457,7 @@
         <div class="image__section">
           <span class="image__text">&lt;experience&gt;</span>
           <img
-            class="card__image"
+            class="card__image card__image-3"
             src="./images/car-image-first.png"
             alt="картинка автомобиля"
             loading="lazy"
@@ -507,11 +507,25 @@
               />
             </svg>
           </button>
-          <button class="card__like-button button-interactive">
+          <button class="card__like-button button__decor">
             <span class="button__text">Like</span>
           </button>
       </section>
     </main>
+    <footer class="footer card">
+      <button
+        type="button"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
+        class="button__decor save-button"
+      >
+        <svg viewBox="0 0 39 39" class="floppy">
+          <use href="./svg/floppy.svg"></use>
+        </svg>
+      </button>
+      <h2 class="footer__title">Сохранить на память</h2>
+    </footer>
+    
     <script src="./scripts/like.js"></script>
   </body>
 </html>

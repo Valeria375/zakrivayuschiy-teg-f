@@ -11,13 +11,16 @@
     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
   --Themes-background-color: #fff;
   --shadow-color: #fff;
+  --font-variation-settings:;
   --block-size: 100%;
   --header-size: 49px;
   --header-margin-start: 120px;
   --header-text-size: 14px;
   --image-margin: 11px;
   --image-start: 23px;
-  --margin-card-text: 25px;
+  --margin-card-text: 27px;
+  --liked-color: #ff0000;
+  --mode-color: #00cc14;
 }
 @media (width > 376px) {
   :root {
