@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-weight: var(--font-variation-settings);
 }
 .header {
   /* width: var(--block-size) ; */
@@ -62,7 +63,7 @@
   background-color: transparent;
   border: transparent;
   font-size: 14px;
-  font-weight: 400;
+  /* font-weight: 400; */
   cursor: pointer;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -92,7 +93,7 @@ main {
 .card__header {
   /* max-width: 371px; */
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(accent-font-weight);
   margin-block-end: 5px;
   /* margin: 8px 10px; */
   margin-block-start: 2px;
@@ -102,12 +103,17 @@ main {
   inline-size: 100%;
   object-fit: cover;
   /* border: 1px solid var(--Themes-mainColor); */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center right;
+  border: 2px solid var(--Themes-mainColor);
+
 }
 .card__text-section {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  margin-block-start: 27px;
+  margin-block-start: 25px;
   margin-left: 25px;
   /* margin: 27px 25px 25px; */
   margin-block-end: 25px;
@@ -116,16 +122,21 @@ main {
 }
 .card__text {
   /* margin: 25px 28px; */
+  /* margin-block-start: 25px; */
   line-height: 116.667%;
   /* margin-block-end: 25px; */
 }
+/* .card__text :last-child {
+  margin-block-start: 0;
+} */
 .image__section {
   position: relative;
+  /* margin-block-end: 27px; */
 }
 .image__text {
   font-family: "Press Start 2P";
   font-size: 14px;
-  font-weight: 400;
+  /* font-weight: 400; */
   color: var(--Themes-mainColor);
   position: absolute;
   inset-inline-end: var(--image-margin);
@@ -151,12 +162,13 @@ main {
   cursor: pointer;
 } */
 .buttons {
-  display: flex;
+  display: grid;
   gap: 12px;
   align-items: center;
   justify-content: end;
   /* background-color: aqua; */
-  /* margin-inline-end: 25px; */
+  grid-template-columns: auto auto;
+  grid-row: auto;
 }
 .button__text {
   display: flex;
@@ -278,11 +290,26 @@ main {
   overflow: hidden;
   border: 2px solid var(--Themes-mainColor);
   font-size: 14px;
-  font-weight: 400;
+  /* font-weight: 400; */
   /* line-height: 90%; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.save-button {
+  min-inline-size: 306px;
+  max-inline-size: 335px;
+  inline-size: 24.6%;
+  min-block-size: 51px;
+  margin-block: 54px 102px;
+  background-color: var(--Themes-background-color);
+  gap: 8px;
+}
+
+.floppy {
+  inline-size: 21px;
+  fill: currentColor;
+  flex-wrap: wrap;
 }
 .button__decor:focus {
   outline: none;
@@ -311,4 +338,76 @@ main {
   .card__header {
     margin-block-end: 5px;
   }
+  dialog {
+  padding: 30px;
+  }
+}
+@supports (
+  (text-stroke: 1px var(--text-color)) or
+    (-webkit-text-stroke: 1px var(--text-color))
+) {
+  .image-text {
+    -webkit-text-stroke: 1px var(--text-color);
+    text-stroke: 1px var(--text-color);
+    text-shadow: none;
+  }
+
+}
+.theme-menu__button:hover {
+  outline: none;
+}
+.theme-menu__button:hover,
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.3s ease;
+}
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--Themes-mainColor);
+}
+.theme-menu__item button:focus-visible::after {
+  outline: none;
+  width: 100%;
+  opacity: 0.6;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+dialog {
+  background-color: var(--Themes-background-color);
+  color: var(--Themes-mainColor);
+  font-family:  Press Start 2P;;
+  font-size: 14px;
+  font-weight: 400;
+  inline-size: min(90.9%, 357px);
+  padding: 30px 40px;
+  position: fixed;
+  border: 2px solid var(--Themes-mainColor);
+  inset: 0;
+  margin: auto;
+}
+dialog::backdrop {
+  background-color: var(--Themes-background-color, rgb(0 0 0 / 0.75));
+}
+.dialog__content {
+  display: grid;
+  grid-template-columns: 39px auto;
+  gap: 20px;
+  justify-content: center;
+}
+.dialog__content .floppy {
+  inline-size: 100%;
+}
+.dialog__button {
+  inline-size: 100%;
+  text-transform: uppercase;
+  margin-block-start: 30px;
+  padding-block: 9px;
 }
