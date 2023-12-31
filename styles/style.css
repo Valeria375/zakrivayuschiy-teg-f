@@ -171,10 +171,10 @@ main {
   /* padding: 9px 17px; */
   font-size: 14px;
   line-height: 90%;
-  margin-inline-end: 25px;
+  /* margin-inline-end: 25px; */
   /* mix-blend-mode: difference; */
   transition: mix-blend-mode .5s;
-margin-inline-start: 17px;
+/* margin-inline-start: 17px; */
 }
 .card__like-button {
   inset-inline-end: 25px;
@@ -212,15 +212,12 @@ margin-inline-start: 17px;
 }
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  max-block-size: 335px;
-}
-.footer__title {
-  font-family: "Press Start 2P";
-  font-size: 14px;
-  margin-block-start: 8px;
+  /* background-color: aqua; */
+  /* flex-direction: column; */
+  /* justify-self: center;
+  align-items: center; */
+  width: var(--footer-block-size);
+  margin-block-start: 54px;
 }
 .like-icon {
   margin: 0;
@@ -296,18 +293,19 @@ margin-inline-start: 17px;
   /* line-height: 90%; */
 }
 .save__button {
-  min-inline-size: 306px;
-  max-inline-size: 335px;
-  inline-size: 24.6%;
-  min-block-size: 51px;
+  /* min-inline-size: 306px; */
+  inline-size: var(--footer-block-size);
+  /* min-block-size: 51px; */
   /* margin-block: 54px 102px; */
   background-color: var(--Themes-background-color);
-  gap: 8px;
-  max-block-size: 335px;
-}
+  /* gap: 8px; */
+  display: flex;
+  flex-direction: column;
 
+}
 .floppy {
-  inline-size: 21px;
+  margin-block-start: 15px;
+  inline-size: 39px;
   fill: currentColor;
   flex-wrap: wrap;
 }
@@ -331,7 +329,7 @@ margin-inline-start: 17px;
 .button__decor:hover::before {
   animation: move 0.5s ease-in-out forwards;
 }
-@media (width > 736px) {
+@media (width > 376px) {
   .card:not(:first-child) {
     margin-block-start: 54px;
   }
@@ -340,6 +338,15 @@ margin-inline-start: 17px;
   }
   dialog {
     padding: 30px;
+  }
+  .save__button {
+    flex-direction: row;
+  }
+  .footer__title {
+    width: 335px;
+  }
+  .floppy {
+
   }
 }
 @supports (
