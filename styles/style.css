@@ -346,7 +346,7 @@ main {
     width: 335px;
   }
   .floppy {
-
+    inline-size: 27px
   }
 }
 @supports (
