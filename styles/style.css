@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: "Press Start 2P", "Inter", sans-serif;
+  font-family: var(--main-font-family);
   font-size: 18px;
   color: var(--Themes-mainColor);
   background-image: var(--Themes-background);
@@ -32,6 +32,7 @@
 }
 .header {
   /* width: var(--block-size) ; */
+  font-family: var(--accent-font-family);
   display: flex;
   align-items: center;
   inline-size: var(--block-size);
@@ -48,7 +49,7 @@
 .header__text {
   font-size: var(--header-text-size);
   text-transform: uppercase;
-  margin-block-end: 25px;
+  margin-block-end: 20px;
 }
 .theme-menu__list {
   display: flex;
@@ -82,8 +83,9 @@ main {
 }
 .card {
   background-color: var(--Themes-background-color);
-  outline: 2px solid var(--main-font-color);
-  font-family: "Inter";
+  outline: 2px solid var(--Themes-mainColor);
+  /* font-family: "Inter"; */
+  font-family: var(--main-font-family);
   border: 2px solid var(--Themes-mainColor, #000);
   inline-size: var(--block-size);
 }
@@ -93,7 +95,7 @@ main {
 .card__header {
   /* max-width: 371px; */
   font-size: 18px;
-  font-weight: var(accent-font-weight);
+  font-weight: var(--accent-font-weight);
   margin-block-end: 5px;
   /* margin: 8px 10px; */
   margin-block-start: 2px;
@@ -157,21 +159,23 @@ main {
   cursor: pointer;
 }
 .buttons {
-  display: grid;
-  gap: 12px;
-  align-items: center;
+  display: flex;
+  /* grid-template-columns:a auto; */
+  /* grid-row: auto; */
   justify-content: end;
-  /* background-color: aqua; */
-  grid-template-columns: auto auto;
-  grid-row: auto;
+  /* align-items: center; */
+  gap: 30px;
 }
 .button__text {
   display: flex;
   font-family: "Press Start 2P";
-  padding: 9px 17px;
+  /* padding: 9px 17px; */
   font-size: 14px;
   line-height: 90%;
   margin-inline-end: 25px;
+  /* mix-blend-mode: difference; */
+  transition: mix-blend-mode .5s;
+margin-inline-start: 17px;
 }
 .card__like-button {
   inset-inline-end: 25px;
@@ -212,6 +216,7 @@ main {
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  max-block-size: 335px;
 }
 .footer__title {
   font-family: "Press Start 2P";
@@ -296,9 +301,10 @@ main {
   max-inline-size: 335px;
   inline-size: 24.6%;
   min-block-size: 51px;
-  margin-block: 54px 102px;
+  /* margin-block: 54px 102px; */
   background-color: var(--Themes-background-color);
   gap: 8px;
+  max-block-size: 335px;
 }
 
 .floppy {

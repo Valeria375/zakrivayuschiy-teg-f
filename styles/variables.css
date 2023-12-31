@@ -2,8 +2,7 @@
 
 :root {
   --Themes-mainColor: #000;
-  --Themes-background: repeating-linear-gradient(
-      to right,
+  --Themes-background: repeating-linear-gradient(to right,
       #d3d3d3,
       transparent 2px
     ),
@@ -23,6 +22,8 @@
   --liked-color: #ff0000;
   --mode-color: #00cc14;
   --text-color: #000;
+  --main-font-family: 'Inter', "Arial", sans-serif;
+  --accent-font-family: "Press Start 2P";
 }
 @media (width > 376px) {
   :root {
