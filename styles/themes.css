@@ -32,7 +32,11 @@
     --accent-font-weight: 785;
     --font-variation-settings: 465;
 }
-
+/* @media (width > 376px) {
+    :root.theme-dark {
+        --font-variation-settings:785;
+    }
+  } */
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -47,8 +51,7 @@
         --Themes-background-color: #fff;
         --shadow-color: #fff;
         --font-variation-settings: 400;
-        --accent-font-weight: 700;
-
+        /* --accent-font-weight: 700; */
     }
   }
   @media (prefers-color-scheme: dark) {
@@ -63,7 +66,12 @@
           linear-gradient(to bottom, #007f0c, #004306);
           --Themes-background-color: #000;
           --shadow-color: #00cc14;
-          --accent-font-weight: 785;
+          /* --accent-font-weight: 785; */
           --font-variation-settings: 465;
+      }
+      @media (width > 376px) {
+        :root {
+            --font-variation-settings:785;
+        }
       }
   }
