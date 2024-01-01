@@ -12,7 +12,7 @@
   --Themes-background-color: #fff;
   --shadow-color: #fff;
   --font-variation-settings: 400;
-  --accent-font-weight: 700;
+  --accent-font-weight: "wght" 700;
   --block-size: 100%;
   --header-size: 49px;
   --header-margin-start: 120px;
@@ -21,13 +21,13 @@
   --image-start: 23px;
   --margin-card-text: 26px;
   --liked-color: #ff0000;
-  --mode-color: #00cc14;
+  --mode-color: #000;
   --text-color: #000;
   --main-font-family: "Inter", "Arial", sans-serif;
   --accent-font-family: "Press Start 2P";
   --footer-block-size: 306px;
 }
-@media (width > 376px) {
+@media (width > 380px) {
   :root {
     --block-size: clamp(375px, 48.5%, 696px);
     --header-size: 65px;
@@ -37,6 +37,6 @@
     --image-start: 25px;
     --margin-card-text: 21px;
     --footer-block-size: 335px;
-    --font-variation-settings: 700;
+    /* --font-variation-settings: 700; */
   }
 }

@@ -153,6 +153,11 @@
     height: 2px;
     background-color: var(--Themes-mainColor);
   }
+  .theme-menu__item button:focus-visible::after {
+    outline: none;
+    width: 100%;
+    opacity: 0.6;
+  }
   button:focus-visible::after {
     transition: width 0.3s ease, opacity 0.3s ease;
   }

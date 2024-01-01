@@ -13,10 +13,11 @@
     ),
     repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-    --Themes-background-color: #fff;
-    --shadow-color: #fff;
-    --font-variation-settings: 400;
-    --accent-font-weight: 700;
+  --Themes-background-color: #fff;
+  --shadow-color: #fff;
+  --font-variation-settings: 400;
+  --accent-font-weight: "wght" 700;
+  --mode-color: #000;
 }
 :root.theme-dark {
   --Themes-mainColor: #00cc14;
@@ -27,10 +28,11 @@
     ),
     repeating-linear-gradient(to bottom, #000, transparent 2px),
     linear-gradient(to bottom, #007f0c, #004306);
-    --Themes-background-color: #000;
-    --shadow-color: #00cc14;
-    --accent-font-weight: 785;
-    --font-variation-settings: 465;
+  --Themes-background-color: #000;
+  --shadow-color: #00cc14;
+  --font-variation-settings: 465;
+  --accent-font-weight: "wght" 785;
+  --mode-color: #00cc14;
 }
 /* @media (width > 376px) {
     :root.theme-dark {
@@ -39,39 +41,36 @@
   } */
 
 @media (prefers-color-scheme: light) {
-    :root {
-      --Themes-mainColor: #000;
-      --Themes-background: repeating-linear-gradient(
-          to right,
-          #d3d3d3,
-          transparent 2px
-        ),
-        repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-        linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-        --Themes-background-color: #fff;
-        --shadow-color: #fff;
-        --font-variation-settings: 400;
-        /* --accent-font-weight: 700; */
-    }
+  :root {
+    --Themes-mainColor: #000;
+    --Themes-background: repeating-linear-gradient(
+        to right,
+        #d3d3d3,
+        transparent 2px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+      linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+    --Themes-background-color: #fff;
+    --shadow-color: #fff;
+    --font-variation-settings: 400;
+    --accent-font-weight: "wght" 700;
+    --mode-color: #000;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-        --Themes-mainColor: #00cc14;
-        --Themes-background: repeating-linear-gradient(
-            to right,
-            #000,
-            transparent 2px
-          ),
-          repeating-linear-gradient(to bottom, #000, transparent 2px),
-          linear-gradient(to bottom, #007f0c, #004306);
-          --Themes-background-color: #000;
-          --shadow-color: #00cc14;
-          /* --accent-font-weight: 785; */
-          --font-variation-settings: 465;
-      }
-      @media (width > 376px) {
-        :root {
-            --font-variation-settings:785;
-        }
-      }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --Themes-mainColor: #00cc14;
+    --Themes-background: repeating-linear-gradient(
+        to right,
+        #000,
+        transparent 2px
+      ),
+      repeating-linear-gradient(to bottom, #000, transparent 2px),
+      linear-gradient(to bottom, #007f0c, #004306);
+    --Themes-background-color: #000;
+    --shadow-color: #00cc14;
+    --font-variation-settings: 465;
+    --mode-color: #00cc14;
+    --accent-font-weight: "wght" 785;
   }
+}

@@ -28,7 +28,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: var(--font-variation-settings);
+  /* font-weight: var(--font-variation-settings); */
+  font-variation-settings: "wgth" var(--font-variation-settings);
 }
 .header {
   /* width: var(--block-size) ; */
@@ -38,18 +39,20 @@
   inline-size: var(--block-size);
   flex-direction: column;
   background-color: var(--Themes-background-color);
-  border: 2px solid var(--Themes-mainColor, #000);
+  border: 2px solid var(--Themes-mainColor);
   margin-block: 102px 104px;
 }
 .header__title {
   font-size: var(--header-size);
   margin-block-start: var(--header-margin-start);
   margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 .header__text {
   font-size: var(--header-text-size);
   text-transform: uppercase;
   margin-block-end: 20px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 .theme-menu__list {
   display: flex;
@@ -95,11 +98,12 @@ main {
 .card__header {
   /* max-width: 371px; */
   font-size: 18px;
-  font-weight: var(--accent-font-weight);
+  /* font-weight: var(--accent-font-weight); */
   margin-block-end: 5px;
   /* margin: 8px 10px; */
   margin-block-start: 2px;
   margin-inline: 10px 24px;
+  font-variation-settings: var(--accent-font-weight);
 }
 .card__image {
   inline-size: 100%;
@@ -252,10 +256,10 @@ main {
 .floppy {
   margin-block-start: 15px;
   inline-size: 39px;
-  fill: currentColor;
+  fill:currentColor;
   flex-wrap: wrap;
 }
-@media (width > 376px) {
+@media (width > 380px) {
   .card:not(:first-child) {
     margin-block-start: 54px;
   }
@@ -299,7 +303,7 @@ dialog {
   margin: auto;
 }
 dialog::backdrop {
-  background-color: var(--Themes-background-color, rgb(0 0 0 / 0.75));
+  background-color: var(--Themes-background-color);
 }
 .dialog__content {
   display: grid;
@@ -315,6 +319,7 @@ dialog::backdrop {
   text-transform: uppercase;
   margin-block-start: 30px;
   padding-block: 9px;
+  background-color: var(--Themes-background-color);
 }
 .theme-menu__item button:focus-visible::after {
   outline: none;
