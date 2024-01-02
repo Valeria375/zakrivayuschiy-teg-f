@@ -43,13 +43,13 @@
   margin-block: 102px 104px;
 }
 .header__title {
-  font-size: var(--header-size);
+  /* font-size: var(--header-size); */
   margin-block-start: var(--header-margin-start);
   margin-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 .header__text {
-  font-size: var(--header-text-size);
+  /* font-size: var(--header-text-size); */
   text-transform: uppercase;
   margin-block-end: 20px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
