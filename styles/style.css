@@ -51,16 +51,21 @@
 .header__text {
   /* font-size: var(--header-text-size); */
   text-transform: uppercase;
-  margin-block-end: 20px;
+  /* margin-block-end: 20px; */
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+.header__theme-menu {
+  align-items: center;
+  justify-content: center;
 }
 .theme-menu__list {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  margin-block-end: 20px;
+  margin-block-start: 20px;
   font-size: 14px;
+  margin-block-end: 25px;
 }
 .theme-menu__button {
   text-transform: uppercase;
