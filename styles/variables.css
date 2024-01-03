@@ -24,7 +24,7 @@
   --mode-color: #000;
   --text-color: #000;
   --main-font-family: "Inter", "Arial", sans-serif;
-  --accent-font-family: "Press Start 2P";
+  --accent-font-family: "Press Start 2P", fantasy;
   --footer-block-size: 306px;
 }
 @media (width > 380px) {
