@@ -274,7 +274,7 @@ main {
 .floppy {
   /* margin-block-start: 15px; */
   inline-size: 21px;
-  fill: var(--Themes-mainColor);
+  fill: currentColor;
   /* flex-wrap: wrap; */
   mix-blend-mode: difference;
   transition: mix-blend-mode .5s;
