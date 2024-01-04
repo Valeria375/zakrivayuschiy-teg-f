@@ -272,10 +272,18 @@ main {
   /* margin-block-start: -2px; */
 }
 .floppy {
-  margin-block-start: 15px;
+  /* margin-block-start: 15px; */
+  inline-size: 21px;
+  fill: var(--Themes-mainColor);
+  /* flex-wrap: wrap; */
+  mix-blend-mode: difference;
+  transition: mix-blend-mode .5s;
+}
+.dialog .floppy {
   inline-size: 39px;
-  fill: currentColor;
-  flex-wrap: wrap;
+  block-size: 39px;
+  color: var(--Themes-mainColor);
+  mix-blend-mode: normal;
 }
 @media (width > 380px) {
   .card:not(:first-child) {
@@ -291,7 +299,7 @@ main {
     flex-direction: row;
   }
   .floppy {
-    inline-size: 27px;
+    inline-size: 21px;
   }
   .footer__text {
     margin-block-start: 15px;

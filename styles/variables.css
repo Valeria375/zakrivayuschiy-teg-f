@@ -3,12 +3,13 @@
 :root {
   --Themes-mainColor: #000;
   --Themes-background: repeating-linear-gradient(
-      to right,
-      #d3d3d3,
-      transparent 2px
+      to left,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
     ),
-    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
   --Themes-background-color: #fff;
   --shadow-color: #fff;
   --font-variation-settings: 400;
