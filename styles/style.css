@@ -40,7 +40,7 @@
   flex-direction: column;
   background-color: var(--Themes-background-color);
   border: 2px solid var(--Themes-mainColor);
-  margin-block: 102px 104px;
+  margin-block: 100px 102px;
 }
 .header__title {
   /* font-size: var(--header-size); */
@@ -273,8 +273,8 @@ main {
 }
 .floppy {
   /* margin-block-start: 15px; */
-  inline-size: 21px;
-  fill: currentColor;
+  inline-size: 28px;
+  fill: var(--Themes-mainColor);
   /* flex-wrap: wrap; */
   mix-blend-mode: difference;
   transition: mix-blend-mode .5s;
