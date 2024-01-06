@@ -250,16 +250,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   cursor: pointer;
   overflow: hidden;
   border: 2px solid var(--Themes-mainColor);
   font-size: 14px;
-  transition: box-shadow 0.3s;
-  cursor: pointer;
   position: relative;
   /* font-weight: 400; */
   /* line-height: 90%; */
+  transition: box-shadow 0.3s ease;
 }
 .save__button {
   /* min-inline-size: 306px; */
@@ -352,9 +350,7 @@ dialog::backdrop {
   text-transform: uppercase;
   margin-block-start: 30px;
   padding-block: 9px;
-  inline-size: 100%;
   /* padding-block: 6.5px; */
-  text-transform: uppercase;
   background-color: var(--Themes-background-color);
 }
 .dialog__text {
@@ -380,9 +376,6 @@ dialog::backdrop {
   position: relative;
   /* transition: box-shadow 0.3s ease; */
 }
-.button__decor {
-  transition: box-shadow 0.3s ease;
-}
 .button__decor::before {
   content: "";
   background-color: var(--mode-color);
@@ -398,9 +391,6 @@ dialog::backdrop {
 .theme-menu__button:hover {
   outline: none;
   opacity: .6;
-}
-.theme-menu__button {
-  transition: opacity 0.3s ease;
 }
 .theme-menu__button:hover,
 .theme-menu__button:focus-visible {
