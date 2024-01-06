@@ -279,9 +279,9 @@ main {
 .floppy {
   /* margin-block-start: 15px; */
   inline-size: 28px;
-  fill: var(--Themes-mainColor);
+  /* fill: var(--Themes-mainColor); */
   /* flex-wrap: wrap; */
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   transition: mix-blend-mode 0.5s;
 }
 .dialog .floppy {
@@ -420,16 +420,8 @@ dialog::backdrop {
   transform: scaleX(0);
   transition: transform .3s;
 }
-.theme-menu__item button:focus-visible::after {
-  outline: none;
-  width: 100%;
-  opacity: 0.6;
-}
 button {
   transition: width 0.3s ease, opacity 0.3s ease;
-}
-button:focus-visible::after {
-  /* transition: width 0.3s ease, opacity 0.3s ease; */
 }
 .theme-menu__button:disabled::before {
   content: "▶️";
