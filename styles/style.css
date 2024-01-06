@@ -235,7 +235,8 @@ main {
   align-items: center; */
   /* width: var(--footer-block-size); */
   justify-content: center;
-  margin-block: 54px 102px;
+  align-items: center;
+  margin-block: 50px 102px;
   gap: 8px;
   /* padding: 15px 20px; */
 }
@@ -254,6 +255,9 @@ main {
   overflow: hidden;
   border: 2px solid var(--Themes-mainColor);
   font-size: 14px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
   /* font-weight: 400; */
   /* line-height: 90%; */
 }
@@ -271,9 +275,8 @@ main {
   /* margin-block-end: 10px; */
   /* margin-bottom: 400px; */
 }
-.footer__text {
-  /* margin-block-end: 10px; */
-  /* margin-block-start: -2px; */
+.save__button .button__text {
+  text-transform: none;
 }
 .floppy {
   /* margin-block-start: 15px; */
@@ -305,9 +308,7 @@ main {
   .floppy {
     inline-size: 21px;
   }
-  .footer__text {
-    margin-block-start: 15px;
-  }
+  
 }
 @supports (
   (text-stroke: 1px var(--text-color)) or
@@ -325,7 +326,7 @@ dialog {
   font-family: "Press Start 2P", fantasy;
   font-size: 14px;
   font-weight: 400;
-  inline-size: min(90.9%, 357px);
+  inline-size: min(90%, 357px);
   padding: 30px 40px;
   position: fixed;
   border: 2px solid var(--Themes-mainColor);
@@ -341,6 +342,7 @@ dialog::backdrop {
   grid-template-columns: 39px auto;
   gap: 20px;
   justify-content: center;
+  align-items: center;
 }
 .dialog__content .floppy {
   inline-size: 100%;
@@ -350,7 +352,17 @@ dialog::backdrop {
   text-transform: uppercase;
   margin-block-start: 30px;
   padding-block: 9px;
+  inline-size: 100%;
+  /* padding-block: 6.5px; */
+  text-transform: uppercase;
   background-color: var(--Themes-background-color);
+}
+.dialog__text {
+  color: var(--Themes-mainColor);
+  font-family: var(--accent-font-family), fantasy;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
 }
 .theme-menu__item button:focus-visible::after {
   outline: none;
@@ -367,4 +379,81 @@ dialog::backdrop {
   box-shadow: 2px 2px 0 0 var(--Themes-mainColor);
   position: relative;
   /* transition: box-shadow 0.3s ease; */
+}
+.button__decor {
+  transition: box-shadow 0.3s ease;
+}
+.button__decor::before {
+  content: "";
+  background-color: var(--mode-color);
+  position: absolute;
+  inset: -2px 0;
+  transform: translateX(-100%);
+  animation: move-backword 0.5s ease-in-out forwards;
+  mix-blend-mode: difference;
+}
+.button__decor:hover::before {
+  animation: move 0.5s ease-in-out forwards;
+}
+.theme-menu__button:hover {
+  outline: none;
+  opacity: .6;
+}
+.theme-menu__button {
+  transition: opacity 0.3s ease;
+}
+.theme-menu__button:hover,
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  cursor: pointer;
+  outline: none;
+  /* transition: opacity 0.3s ease; */
+}
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  margin-inline-start: 0;
+
+}
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--Themes-mainColor);
+  inset-block-end: -3px;
+  opacity: 0.6;
+  transform-origin: 0%;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+.theme-menu__item button:focus-visible::after {
+  outline: none;
+  width: 100%;
+  opacity: 0.6;
+}
+button {
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+button:focus-visible::after {
+  /* transition: width 0.3s ease, opacity 0.3s ease; */
+}
+.theme-menu__button:disabled::before {
+  content: "▶️";
+  inline-size: 14px;
+  block-size: 14px;
+  margin-inline-end: 5px;
+  animation: arrow-animation .5s ease-in-out alternate infinite;
+}
+.theme-menu__button:focus {
+  outline: none;
+}
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
 }
